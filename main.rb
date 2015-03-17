@@ -24,8 +24,8 @@ class MyWindow < Gosu::Window
 
   def update
     if button_down? Gosu::KbLeft or button_down? Gosu::GpLeft then
-    @player.turn_left
-  end
+      @player.turn_left
+    end
 
     if button_down? Gosu::KbRight or button_down? Gosu::GpRight then
       @player.turn_right
@@ -41,6 +41,7 @@ class MyWindow < Gosu::Window
     if rand(100) < 4 and @stars.size < 25 then
       @stars.push(Star.new(@star_anim))
     end
+    
   end
 
   def draw
